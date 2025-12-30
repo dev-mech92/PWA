@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Market</title>
+
+  <!-- Mobile settings -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#111">
+
+  <!-- PWA -->
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="icon.png">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: system-ui, sans-serif;
+      background: #0f0f0f;
+      color: #fff;
+    }
+
+    header {
+      padding: 15px;
+      background: #181818;
+      text-align: center;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .product {
+      padding: 15px;
+      border-bottom: 1px solid #333;
+    }
+
+    button {
+      padding: 10px 15px;
+      background: #00c853;
+      border: none;
+      border-radius: 6px;
+      color: #000;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+  <header>Market</header>
+
+  <div class="product">
+    <h3>Sample Product</h3>
+    <p>₹999</p>
+    <button onclick="openProduct()">View</button>
+  </div>
+
+  <script>
+    // Register Service Worker
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('sw.js')
+        .then(() => console.log('Service Worker Registered'))
+        .catch(err => console.log('SW error', err));
+    }
+
+    function openProduct() {
+      // later you can replace with in-app browser logic
+      window.location.href = "https://example.com";
+    }
+  </script>
+</body>
+  </html>
