@@ -1,6 +1,6 @@
 {
-  "name": "Market",
-  "short_name": "Market",
+  "name": "GTA V",
+  "short_name": "GTA V",
   "start_url": "./index.html",
   "display": "standalone",
   "background_color": "#0f0f0f",
